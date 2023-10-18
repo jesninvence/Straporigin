@@ -1,0 +1,8 @@
+.as {
+    text-decoration-line: none;
+    color: rgba(218, 217, 217, 0.907);
+}
+
+.as:hover {
+    color: white;
+}

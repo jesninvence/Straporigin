@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&family=Open+Sans:wght@300&family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" integrity="sha512-ur3bvcsoBMm1IdHaX7qza+XM3y/16yPN7RV7BxmdEAxkMf32hET4V2XPqGF7vaB35aYvFAT/9vOb4M5zck+eUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Righteous&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Strap_ItemInfo.css">
+    <link rel="icon" type="" href="img/strap logo 2.png">
+    <title>Strap</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-black sticky-bottom">
+        <div class="container-fluid">
+            <section class="header">
+                <img src="img/strap logo 2.png" alt="" width="35%">
+                <div class="small-navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-black" onclick="global.showSearchElement()"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="btn btn-black" onclick="global.showCartElement()"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="btn btn-black" href="Strap_Login.html" type="button"><i class="fa-regular fa-user" style="color: #ffffff;"></i></i></a>
+                        </li>
+                    </ul>
+                    <button onclick="global.showMobileNavbar()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button> 
+                </div>
+            </section>
+            <div class="collapse navbar-collapse" id="navigationExercise10">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white md" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Strap_shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Strap_Collections.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Strap_Blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Strap.Contact_Us.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav ms-auto hide-sm">
+                <li class="nav-item">
+                    <a class="btn btn-black" href=""><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto hide-sm">
+                <li class="nav-item">
+                    <a class="btn btn-black" onclick="global.showCartElement()"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto hide-sm">
+                <li class="nav-item">
+                    <a class="btn btn-black" type="button" data-bs-toggle="modal" data-bs-target="#sampleModal1"><i class="fa-regular fa-user" style="color: #ffffff;"></i></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+    <div class="container">
+        <div class="item-info">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                        <img src="img/strap t4.jpg" alt="" width="100%" id="main-image">
+                    <div class="other-display">
+                
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 position-relative infos">
+                    <br><br>
+                    <h1 id="desc">Strap Slime Logo Black Tee</h1>
+                    <p class="card-price" id="price"><i class="fa-solid fa-peso-sign"></i> 850.00</p>
+                    <br>
+                    <p class="size">Size</p>
+                    <div id="sizes" class="container">
+                        <button class="active">X-SMALL</button>
+                        <button>SMALL</button>
+                        <button>MEDIUM</button>
+                        <button>LARGE</button>
+                        <button>X-LARGE</button>
+                        <button>2X-LARGE</button>
+                    </div>
+                    <br><br><br>
+                    <p>Quantity</p>
+                    <div class="col-4">
+                        <div class="input-group quantity mb-3 info-quantity">
+                            <button class="input-control" disabled> <i class="fa-solid fa-minus"></i> </button>
+                            <div class=quantity-container>
+                                <input id="quantity" class="target-quantity" type="number" style="border: none;" onchange="this.value = parseInt(this.value) || 1" value="1">
+                            </div>
+                            <button class="input-control"> <i class="fa-solid fa-plus"></i> </button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="product-btn">
+                        <button onclick="global.cart.add()">Add to Cart</button>
+                        <button class="text-white bg-black">Buy it Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr><br>
+    <div class="container rounded">
+        <div class="product-details">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Product details of STRAP SLIME LOGO BLACK TEE</h5>
+                    <li>100% COTTON</li>
+                    <li>RIBKNIT COLLAR</li>
+                    <li>SCREEN PRINTED DESIGN</li>
+                    <li>LOOSE FIT</li>
+                </div>
+                <div class="col-12">
+                    <br>
+                    <img src="./img/strap t4 details.jpg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="content">
+            <h3>RELATED PRODUCTS</h3>
+            <div class="row g-3" id="related_products">
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="footer bg-black">
+        <div class="container bg-black text-white">
+            <div class="row">
+                <div class="col-12 col-md-3 order-2 order-md-2">
+                    <br><br>
+                    <h5>HELP & FAQs</h5>
+                    <p><a href="" class="as">Returns & Exhcange</a></p>
+                    <p><a href="" class="as">Customer Service</a></p>
+                    <p><a href="" class="as">Online Ordering</a></p>
+                    <p><a href="" class="as">International Shipment</a></p>
+                </div>
+                <div class="col-12 col-md-3 order-2 order-md-3">
+                    <br><br>
+                    <h5>ABOUT US</h5>
+                    <p><a href="Strap_UnderConstruction.html" class="as">Store</a></p>
+                    <p><a href="Strap_UnderConstruction.html" class="as">Careers</a></p>
+                    <p><a href="" class="as">Terms & Conditions of Sales</a></p>
+                    <p><a href="" class="as">Privacy Policy</a></p>
+                </div>
+                <div class="col-12 col-md-6 order-3 order-md-4">
+                    <div class="news-letter">
+                        <br><br>
+                        <h5 class="text-center">SUBSCRIBE TO OUR NEWSLETTER</h5>
+                        <form>
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                        <div class="footer-socmed text-center">
+                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer bg-black">
+        <br>
+        <div class="container bg-black text-white">
+            <form action="">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center"><i class="fa-regular fa-copyright"></i> 2023, STRAP</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="hide" id="shadow">
+    </div>
+    <div id="Cart">
+        <button class="close" onclick="global.hideCartElement()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="not-empty">
+            <h3 class="text-center fs-2">Your cart</h3>
+            <div class="items">
+                
+            </div>
+            <div class="checkout">
+                <div>
+                    <div>
+                        <p >Subtotal</p>
+                        <p class="text-end total-price"><i class="fa-solid fa-peso-sign"></i> 0.00</p>
+                    </div>
+                    <a href="./Strap_CheckoutForm.html">Check out</a >
+                </div> 
+            </div>
+        </div>
+        <div class="empty hide">
+            <div class="content">
+            <h3>Your cart is empty</h3>
+            <br>
+            <a href="Strap_Collections.html">Continue shopping</a>
+        </div>
+        </div>
+    </div>
+
+    <div id="mobile-navbar">
+        <div class="mobile-logo bg-black">
+            <img src="img/Strap White-trans.png" alt="" width="25%">
+        </div>
+        <button class="close text-white" onclick="global.hideMobileNavbar()"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="./Strap_shop.html">Shop</a>
+            </li>
+            <li>
+                <a href="./Strap_Collections.html">Collections</a>
+            </li>
+            <li>
+                <a href="./Strap_Blogs.html">Blogs</a>
+            </li>
+            <li>
+                <a href="./Strap.Contact_Us.html">Contact Us</a>
+            </li>
+        </ul>
+        <div class="mobile-footer bg-black">
+            <div class="footer-socmed text-center" style="margin-top: 13rem;">
+                <br>
+                <h6 class="text-white">FOLLOW US</h6>
+                <br>
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+
+     <!-- Lodirrr-->
+     <div id="loader-container" class="hide">
+        <span class="loader"></span>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="Strap_CartForm.js"></script>
+</html>

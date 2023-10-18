@@ -1,0 +1,24 @@
+body {
+    background-image: url(img/underconpage.png);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+    padding: 10px 0;
+    background-color: white;
+    border: none;
+    width: 10%; 
+    cursor: pointer;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.913);
+}
+
+#lnk {
+    text-decoration-line: none;
+    color: orange;
+}

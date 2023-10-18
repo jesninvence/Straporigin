@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&family=Open+Sans:wght@300&family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" integrity="sha512-ur3bvcsoBMm1IdHaX7qza+XM3y/16yPN7RV7BxmdEAxkMf32hET4V2XPqGF7vaB35aYvFAT/9vOb4M5zck+eUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Righteous&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Strap_CheckoutForm.css">
+    <title>Information - STRAP - Checkout</title>
+    <link rel="icon" type="" href="img/strap logo 2.png">
+</head>
+<body>
+    <div class="header bg-black text-center">
+        <img src="img/strap logo 2.png" alt="" width="35%">
+        <div class="bar text-end">
+            <button onclick="global.showMobileNavbar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+            </div>
+            <div class="col-7">
+                <div class="pagination">
+                    <a onclick="if (!this.classList.contains('active')) { global.gotoCheckoutForm(event)}" class="information-indicator active" disabled>Information</a>
+                    <a onclick="if (this.nextElementSibling.classList.contains('active')) {global.gotoShipping(event)}" class="shipping-indicator">Shipping</a>
+                    <a class="payment-indicator">Payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <form action="">
+
+            <div class="row g-3">
+                <div class="col-12 col-md-5" style="box-shadow: 0 0 0 1px rgb(203, 203, 203);height: 100vh;position: relative;display: flex;flex-direction: column;">
+                    
+                    <h3 class="text-center" style="padding: 10px 10px;">Order Summary</h3>
+                    <br>
+                    <div class="items" id="orders">
+                        
+                    </div>
+                        <div class="total-ship">
+                            <div class="row">
+                                <h5>Details</h5>
+                                <hr>
+                                <div class="col-6">
+                                    <p>Amount</p>
+                                    <p>Shipping Fee</p>
+                                    <h5>Total</h5>
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-end amount">₱ 850.00</p>
+                                    <p class="text-end shipping_fee">₱ 130.00</p>
+                                    <p class="text-end total">₱ 980.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div class="col-12 col-md-5 " id="checkout_form">
+                    <h3 class="text-center bg-black text-white" style="padding: 10px 10px;">Checkout Form</h3>
+                    <br>
+                    <label for="email"><h5>Contact</h5></label>
+                    <input type="email" class="w-100 p-2 email_input" placeholder="Email or mobile phone number">
+                    <br><br>
+                    <h5>Shipping address</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" class="w-100 p-2" placeholder="First name">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="w-100 p-2" placeholder="Last name">
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <input type="text" class="w-100 p-2" placeholder="Address">
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <input type="text" class="w-100 p-2" placeholder="Barangay">
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <input type="text" class="w-100 p-2" placeholder="Postal code">
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <input type="text" class="w-100 p-2" placeholder="City">
+                        </div>
+                    </div>
+                    <br>
+                    <label for=""><h5>Region</h5></label>
+                    <select name="" id="" class="w-100 p-2">
+                        <option value="">Abra</option>
+                        <option value="">Agusan Del Norte</option>
+                        <option value="">Agusan Del Sur</option>
+                        <option value="">Aklan</option>
+                        <option value="">Albay</option>
+                        <option value="">Antique</option>
+                        <option value="">Apayao</option>
+                        <option value="">Aurora</option>
+                        <option value="">Basilan</option>
+                        <option value="">Batanes</option>
+                        <option value="">Batangas</option>
+                        <option value="">Benguet</option>
+                        <option value="">Biliran</option>
+                        <option value="">Bohol</option>
+                        <option value="">Bukidnon</option>
+                        <option value="">Bulacan</option>
+                        <option value="">Cagayan De Oro</option>
+                        <option value="">Camarines Norte</option>
+                        <option value="">Camarines Sur</option>
+                        <option value="">Camiguin</option>
+                        <option value="">Capiz</option>
+                        <option value="">Catanduanes</option>
+                        <option value="">Cavite</option>
+                        <option value="">Cebu</option>
+                        <option value="">Cotabato</option>
+                        <option value="">Compostela Valley</option>
+                        <option value="">Davao Del Sur</option>
+                        <option value="">Davao Occidental</option>
+                        <option value="">Davao Oriental</option>
+                        <option value="">Dinagat Island</option>
+                        <option value="">Eastern Samar</option>
+                        <option value="">Guimaras</option>
+                        <option value="">Ifugao</option>
+                        <option value="">Ilocos Norte</option>
+                        <option value="">Ilocos Sur</option>
+                        <option value="">Iloilo</option>
+                        <option value="">Isabela</option>
+                        <option value="">Kalinga</option>
+                        <option value="">La Union</option>
+                        <option value="">Laguna</option>
+                        <option value="">Lanao del Norte</option>
+                        <option value="">Lanao del Sur</option>
+                        <option value="">Leyte</option>
+                        <option value="">Maguindanao</option>
+                        <option value="">Marinduque</option>
+                        <option value="">Masbate</option>
+                        <option value="">Metro Manila</option>
+                        <option value="">Misamis Occidental</option>
+                        <option value="">Misamis Oriental</option>
+                        <option value="">Mountain Province</option>
+                        <option value="">Negros Occidental</option>
+                        <option value="">Negros Oriental</option>
+                        <option value="">Northern Samar</option>
+                        <option value="">Nueva Ecija</option>
+                        <option value="">Nueva Vizcaya</option>
+                        <option value="">Occidental Mindoro</option>
+                        <option value="">Oriental Mindoro</option>
+                        <option value="">Palawan</option>
+                        <option value="">Pampanga</option>
+                        <option value="">Pangasinan</option>
+                        <option value="">Quezon</option>
+                        <option value="">Quirino</option>
+                        <option value="">Rizal</option>
+                        <option value="">Romblon</option>
+                        <option value="">Samar</option>
+                        <option value="">Sarangani</option>
+                        <option value="">Siquijor</option>
+                        <option value="">Sorsogon</option>
+                        <option value="">South Cotabato</option>
+                        <option value="">Southern Leyte</option>
+                        <option value="">Sultan Kudarat</option>
+                        <option value="">Sulu</option>
+                        <option value="">Surigao del Norte</option>
+                        <option value="">Surigao del Sur</option>
+                        <option value="">Tarlac</option>
+                        <option value="">Tawi-Tawi</option>
+                        <option value="">Zambales</option>
+                        <option value="">Zamboanga del Norte</option>
+                        <option value="">Zamboanga del Sur</option>
+                        <option value="">Zamboanga Sibugay</option>
+                    </select>
+                    <div class="row">
+                        <div class="col-12">
+                            <br>
+                            <input type="text" class="w-100 p-2" placeholder="Phone">
+                        </div>
+                    </div>
+                    <br>
+                    <input type="checkbox" name="" id=""> Save this information for next time
+                    <br><br>
+                    <a href="/Strap_shop.html" style="text-decoration: none;"><p><i class="fa-solid fa-chevron-left"></i> Back to shopping</p></a>
+                    <a onclick="global.gotoShipping(event)"><button class="proceed">Proceed to shipping <i class="fa-solid fa-arrow-right-long"></i></button></a>
+                </div>
+                <div class="col-7 hide" id="shipping_details">
+                    <h3 class="text-center bg-black text-white" style="padding: 10px 10px;">Shipping Form</h3>
+                    <br>
+                    <div class="contact">
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="title">Contact</p>
+                            </div>
+                            <div class="col-9 email_display">
+                                <p>juandelacruz@gmail.com</p>
+                            </div>
+                            <div class="col-3">
+                                <p class="title">Ship to</p>
+                            </div>
+                            <div class="col-9 ship_to_display">
+                                <p>Earendel 28-B (L-Y), 12.9-B (Y.O)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Shipping method</h5>
+                    <br>
+                    <div class="shipping">
+                        <div class="row">
+                            <div class="col-3" style="align-self: center !important;">
+                                <p>Standard Flat Rate</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="text-end">₱130.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="proinfo">
+                        <div class="row">
+                            <div class="col-5">
+                                <a class="pagination_button" onclick="global.gotoCheckoutForm(event)"><p><i class="fa-solid fa-chevron-left"></i> Return to information</p></a>
+                            </div>
+                            <div class="col-7">
+                                <a onclick="global.gotoPayment(event)"><button class="proceed">Proceed to payment <i class="fa-solid fa-arrow-right-long"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 hide" id="payment_details">
+                    <h3 class="text-center bg-black text-white" style="padding: 10px 10px;">Shipping Form</h3>
+                    <br>
+                    <div class="contact">
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="title">Contact</p>
+                            </div>
+                            <div class="col-9 email_display">
+                                <p>juandelacruz@gmail.com</p>
+                            </div>
+                            <div class="col-3">
+                                <p class="title">Ship to</p>
+                            </div>
+                            <div class="col-9 ship_to_display">
+                                <p>Earendel 28-B (L-Y), 12.9-B (Y.O)</p>
+                            </div>
+                            <div class="col-3">
+                                <p class="title">Method</p>
+                            </div>
+                            <div class="col-9">
+                                <p>Standard Flat Rate - ₱130.00</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5>Payment</h5>
+                        <br>
+                        <div class="payment">
+                            <div class="row">
+                                <p>Choose Payment Method :</p>
+                                <div class="col-6">
+                                    <select class="credit-card-options" name="" id="" onchange="updatePaymentOption(this.value)" class="w-100 p-2">
+                                        <option value="none">none</option>
+                                        <option value="BPI">BPI</option>
+                                        <option value="BDO">BDO</option>
+                                        <option value="VISA">VISA</option>
+                                        <option value="Paymaya">Paymaya</option>
+                                        <option value="Metrobank">Metrobank</option>
+                                        <option value="Credit card">Credit card</option>
+                                    </select>
+                                </div>
+                                <div class="credit-card-info hide">
+
+                                    <div class="form-container">
+                                        <div class="field-container">
+                                            <label for="name">Name</label>
+                                            <input id="name" maxlength="20" type="text">
+                                        </div>
+                                        <div class="field-container">
+                                            <label for="cardnumber">Card Number</label>
+                                            <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric">
+                                            <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                
+                                            </svg>
+                                        </div>
+                                        <div class="field-container">
+                                            <label for="expirationdate">Expiration (mm/yy)</label>
+                                            <input id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                                        </div>
+                                        <div class="field-container">
+                                            <label for="securitycode">Security Code</label>
+                                            <input id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="cod-checkbox">
+                            <input type="checkbox" name="" id="" onchange="let credit_card_options = document.querySelector('#payment_details .credit-card-options'); if (this.checked) credit_card_options.classList.add('hide');else credit_card_options.classList.remove('hide') "> Cash on Delivery            
+                        </div>
+                        <br><br>
+                        <div class="proinfo">
+                            <div class="row">
+                                <div class="col-5">
+                                    <a class="pagination_button" onclick="global.gotoShipping(event)"><p><i class="fa-solid fa-chevron-left"></i> Return to shipping</p></a>
+                                </div>
+                                <div class="col-7">
+                                    <a onclick="global.placeOrder()" class="proceed text-center" type="button" data-bs-toggle="modal" data-bs-target="#order-placed">Place Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br><br>
+    <div class="footer bg-black">
+        <div class="container bg-black text-white">
+            <div class="row">
+                <div class="col-12 col-md-3 order-2 order-md-2">
+                    <br><br>
+                    <h5>HELP & FAQs</h5>
+                    <p><a href="" class="as">Returns & Exhcange</a></p>
+                    <p><a href="" class="as">Customer Service</a></p>
+                    <p><a href="" class="as">Online Ordering</a></p>
+                    <p><a href="" class="as">International Shipment</a></p>
+                </div>
+                <div class="col-12 col-md-3 order-2 order-md-3">
+                    <br><br>
+                    <h5>ABOUT US</h5>
+                    <p><a href="Strap_UnderConstruction.html" class="as">Store</a></p>
+                    <p><a href="Strap_UnderConstruction.html" class="as">Careers</a></p>
+                    <p><a href="" class="as">Terms & Conditions of Sales</a></p>
+                    <p><a href="" class="as">Privacy Policy</a></p>
+                </div>
+                <div class="col-12 col-md-6 order-3 order-md-4">
+                    <div class="news-letter">
+                        <br><br>
+                        <h5 class="text-center">SUBSCRIBE TO OUR NEWSLETTER</h5>
+                        <form>
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                        <div class="footer-socmed text-center">
+                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer bg-black">
+        <br>
+        <div class="container bg-black text-white">
+            <form action="">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center"><i class="fa-regular fa-copyright"></i> 2023, STRAP</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+     <!-- Lodirrr-->
+     <div id="loader-container" class="hide">
+        <span class="loader"></span>
+    </div>
+
+    <div class="modal fade" id="order-placed">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 class="text-center">YOUR ORDER HAS BEEN PLACED!</h5>
+                    <br>
+                    <p class="text-center">Dear <span class="firstName">Juan</span></p>
+                    <p class="advice text-center">We know you can't wait for your package to arrive. That is why you can track your order here:</p>
+                    <div class="container-2">
+                        <a class="track" href="https://www.jtexpress.ph/index/query/gzquery.html?bills=1635015099">Track Package</a>
+                    </div>
+                    <br>
+                    <p class="note text-center">Please note, if could take some time for the tracking information to show on the above</p>
+                    <hr>
+                    <h5 class="text-center">YOUR ORDER NUMBER IS #<span class="order_number">GS-2455</span></h5>
+                    <p class="text-center today-date">Aug 31, 2021</p>
+                    <br>
+                    <h5>SHIPPED ITEMS</h5>
+                    <hr>
+                    <div class="items">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="img/strap t5.jpg" alt="" width="100%">
+                                </div>
+                                <div class="col-8 position-relative">
+                                    <br>
+                                    <p class="tshirt-name">Strap Tshirt</p>
+                                    <p class="price-1">₱ 850.00</p>
+                                    <p>Quantity: 1</p>
+                                    <p class="size">X-LARGE</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="done" onclick="donePayment()" style="cursor: pointer;">Done</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-navbar">
+        <div class="mobile-logo bg-black">
+            <img src="img/Strap White-trans.png" alt="" width="25%">
+        </div>
+        <button class="close text-white" onclick="global.hideMobileNavbar()"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="./Strap_shop.html">Shop</a>
+            </li>
+            <li>
+                <a href="./Strap_Collections.html">Collections</a>
+            </li>
+            <li>
+                <a href="./Strap_Blogs.html">Blogs</a>
+            </li>
+            <li>
+                <a href="./Strap.Contact_Us.html">Contact Us</a>
+            </li>
+        </ul>
+        <div class="mobile-footer bg-black">
+            <div class="footer-socmed text-center" style="margin-top: 13rem;">
+                <br>
+                <h6 class="text-white">FOLLOW US</h6>
+                <br>
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
