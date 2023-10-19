@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-md bg-black sticky-bottom">
         <div class="container-fluid">
             <section class="header">
-                <img src="img/strap logo 2.png" alt="" width="35%">
+                <img src="img/strap logo 2.png" class="hide-sm" alt="" width="35%">
                 <div class="small-navbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
@@ -36,7 +36,7 @@
                             <a class="btn btn-black" onclick="global.showCartElement()"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav hide-sm">
                         <li class="nav-item">
                             <a class="btn btn-black" href="Strap_Login.html" type="button"><i class="fa-regular fa-user" style="color: #ffffff;"></i></i></a>
                         </li>
@@ -77,14 +77,14 @@
             </ul>
             <ul class="navbar-nav ms-auto hide-sm">
                 <li class="nav-item">
-                    <a class="btn btn-black" type="button" data-bs-toggle="modal" data-bs-target="#sampleModal1"><i class="fa-regular fa-user" style="color: #ffffff;"></i></i></a>
+                    <a class="btn btn-black" href="Strap_Login.html" type="button" data-bs-toggle="modal" data-bs-target="#sampleModal1"><i class="fa-regular fa-user" style="color: #ffffff;"></i></i></a>
                 </li>
             </ul>
         </div>
     </nav>
     <br><br>
-    <h1 class="text-center">Contact Us</h1>
-    <p class="text-center">We can't solve your problem if you don't tell us about it!</p>
+    <h1 class="text-center" style="font-weight: 300;">Contact Us</h1>
+    <!-- <p class="text-center">We can't solve your problem if you don't tell us about it!</p> -->
     <br>
     <div class="container">
         <div class="contact-form">
@@ -231,15 +231,17 @@
             <li>
                 <a href="./Strap_Collections.html">Collections</a>
             </li>
-            <li>
+            <li >
                 <a href="./Strap_Blogs.html">Blogs</a>
             </li>
             <li class="current_at">
                 <a href="./Strap.Contact_Us.html">Contact Us</a>
             </li>
         </ul>
+        <a class="mobile-login btn btn-black" href="Strap_Login.html" type="button" style="margin-top: 10rem;"><i class="fa-regular fa-user" style="color: #000000;"></i> Login</i></a>
+        <br><br>
         <div class="mobile-footer bg-black">
-            <div class="footer-socmed text-center" style="margin-top: 13rem;">
+            <div class="footer-socmed text-center">
                 <br>
                 <h6 class="text-white">FOLLOW US</h6>
                 <br>

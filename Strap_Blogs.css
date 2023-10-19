@@ -518,6 +518,7 @@ animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
   align-items: center;
   border: none;
   font-size: 2em;
+  gap: 6.5rem;
 }
 
 
@@ -568,9 +569,15 @@ animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
   position: absolute;
   right: .5em;
   font-size: 1.5em;
-  top: 1em;
+  top: 0.5em;
   background: none;
   border: none;
+}
+
+.mobile-login {
+  box-shadow: 0 0 0 1px black;
+  margin-left: 1rem;
+  color: rgb(0, 0, 0) !important;
 }
 
 #header .small-navbar .navbar-nav a{
@@ -689,4 +696,21 @@ animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
 
 .blogs .card-body .date {
   font-size: 10px;
+}
+
+/************Lts-blogs************/
+
+.lts-blogs {
+  margin-top: 1rem;
+}
+
+.lts-blogs .container .card {
+  border: none;
+  transform: scale(1.01);
+}
+
+.blogs-disc h1 {
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

@@ -18,14 +18,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Righteous&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="Strap_ItemInfo.css">
-    <title>Login - Strap</title>
+    <title>Strap / Login</title>
     <link rel="icon" type="" href="img/strap logo 2.png">
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-black sticky-bottom">
         <div class="container-fluid">
             <section class="header">
-                <img src="img/strap logo 2.png" alt="" width="35%">
+                <img src="img/strap logo 2.png" class="hide-sm" alt="" width="35%">
                 <div class="small-navbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
@@ -37,7 +37,7 @@
                             <a class="btn btn-black" onclick="global.showCartElement()"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav hide-sm">
                         <li class="nav-item">
                             <a class="btn btn-black" href="Strap_Login.html" type="button"><i class="fa-regular fa-user" style="color: #ffffff;"></i></i></a>
                         </li>
@@ -83,13 +83,11 @@
             </ul>
         </div>
     </nav>
-    <br><br><br>
-    <div class="container">
+    <div class="container" style="margin-bottom: 5rem; margin-top: 5rem;">
         <div class="contact-form">
             <div class="row">
-                <div class="col-2 col-md-4"></div>
-                <br>
-                <div class="col-8 col-md-4" style="box-shadow: 0 0 0 1px black;">
+                <div class="col-md-4"></div>
+                <div class="col-12 col-md-4" >
                     <br>
                     <h1 class="text-center" style="font-weight: 400;">Login</h1>
                     <div class="fill-out">
@@ -121,12 +119,10 @@
                     </div>
                     <br>
                 </div>
-                <div class="col-2 col-md-4"></div>
+                <div class="col-md-4"></div>
             </div>
         </div>
     </div>
-
-    <br><br><br><br><br>
     <div class="footer bg-black">
         <div class="container bg-black text-white">
             <div class="row">
@@ -167,7 +163,7 @@
         </div>
     </div>
     <div class="footer bg-black">
-        <br>
+        <br><br>
         <div class="container bg-black text-white">
             <form action="">
                 <div class="row">
@@ -222,15 +218,17 @@
             <li>
                 <a href="./Strap_Collections.html">Collections</a>
             </li>
-            <li>
+            <li >
                 <a href="./Strap_Blogs.html">Blogs</a>
             </li>
             <li>
                 <a href="./Strap.Contact_Us.html">Contact Us</a>
             </li>
         </ul>
+        <a class="mobile-login btn btn-black" href="Strap_Login.html" type="button" style="margin-top: 10rem;"><i class="fa-regular fa-user" style="color: #000000;"></i> Login</i></a>
+        <br><br>
         <div class="mobile-footer bg-black">
-            <div class="footer-socmed text-center" style="margin-top: 13rem;">
+            <div class="footer-socmed text-center">
                 <br>
                 <h6 class="text-white">FOLLOW US</h6>
                 <br>

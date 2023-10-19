@@ -580,6 +580,7 @@ input:valid~label {
     align-items: center;
     border: none;
     font-size: 2em;
+    gap: 6.5rem;
 }
 
 
@@ -630,9 +631,15 @@ input:valid~label {
     position: absolute;
     right: .5em;
     font-size: 1.5em;
-    top: 1em;
+    top: 0.5em;
     background: none;
     border: none;
+}
+
+.mobile-login {
+    box-shadow: 0 0 0 1px black;
+    margin-left: 1rem;
+    color: rgb(0, 0, 0) !important;
 }
 
 #header .small-navbar .navbar-nav a{
