@@ -23,18 +23,20 @@
 <body>
     <div class="header bg-black text-center">
         <img src="img/strap logo 2.png" alt="" width="35%">
-        <div class="bar text-end">
-            <button onclick="global.showMobileNavbar()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
+        <section class="header">
+            <div class="small-navbar">
+                <button onclick="global.showMobileNavbar()">
+                    <i class="fa-solid fa-bars"></i>
+                </button> 
+            </div>
+        </section>
     </div>
     <br><br>
     <div class="container">
-        <div class="row">
-            <div class="col-5">
+        <div class="row g-3">
+            <div class="col-12 col-md-6">
             </div>
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-6">
                 <div class="pagination">
                     <a onclick="if (!this.classList.contains('active')) { global.gotoCheckoutForm(event)}" class="information-indicator active" disabled>Information</a>
                     <a onclick="if (this.nextElementSibling.classList.contains('active')) {global.gotoShipping(event)}" class="shipping-indicator">Shipping</a>
@@ -48,13 +50,11 @@
         <form action="">
 
             <div class="row g-3">
-                <div class="col-12 col-md-5" style="box-shadow: 0 0 0 1px rgb(203, 203, 203);height: 100vh;position: relative;display: flex;flex-direction: column;">
+                <div class="col-12 col-md-6" style="box-shadow: 0 0 0 1px rgb(203, 203, 203);height: 100vh;position: relative;display: flex;flex-direction: column;">
                     
                     <h3 class="text-center" style="padding: 10px 10px;">Order Summary</h3>
                     <br>
                     <div class="items" id="orders">
-                        
-                    </div>
                         <div class="total-ship">
                             <div class="row">
                                 <h5>Details</h5>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 " id="checkout_form">
+                <div class="col-12 col-md-6" id="checkout_form">
                     <h3 class="text-center bg-black text-white" style="padding: 10px 10px;">Checkout Form</h3>
                     <br>
                     <label for="email"><h5>Contact</h5></label>
@@ -81,28 +81,30 @@
                     <br><br>
                     <h5>Shipping address</h5>
                     <div class="row">
-                        <div class="col-6">
-                            <input type="text" class="w-100 p-2" placeholder="First name">
-                        </div>
-                        <div class="col-6">
-                            <input type="text" class="w-100 p-2" placeholder="Last name">
-                        </div>
-                        <div class="col-12">
-                            <br>
-                            <input type="text" class="w-100 p-2" placeholder="Address">
-                        </div>
-                        <div class="col-12">
-                            <br>
-                            <input type="text" class="w-100 p-2" placeholder="Barangay">
-                        </div>
-                        <div class="col-6">
-                            <br>
-                            <input type="text" class="w-100 p-2" placeholder="Postal code">
-                        </div>
-                        <div class="col-6">
-                            <br>
-                            <input type="text" class="w-100 p-2" placeholder="City">
-                        </div>
+                        <form id="form">
+                            <div class="col-6">
+                                <input type="text" class="w-100 p-2" placeholder="First name" name="name">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="w-100 p-2" placeholder="Last name" name ="surname">
+                            </div>
+                            <div class="col-12">
+                                <br>
+                                <input type="text" class="w-100 p-2" placeholder="Address">
+                            </div>
+                            <div class="col-12">
+                                <br>
+                                <input type="text" class="w-100 p-2" placeholder="Barangay">
+                            </div>
+                            <div class="col-6">
+                                <br>
+                                <input type="text" class="w-100 p-2" placeholder="Postal code">
+                            </div>
+                            <div class="col-6">
+                                <br>
+                                <input type="text" class="w-100 p-2" placeholder="City">
+                            </div>
+                        </form>
                     </div>
                     <br>
                     <label for=""><h5>Region</h5></label>
@@ -198,9 +200,12 @@
                     <input type="checkbox" name="" id=""> Save this information for next time
                     <br><br>
                     <a href="/Strap_shop.html" style="text-decoration: none;"><p><i class="fa-solid fa-chevron-left"></i> Back to shopping</p></a>
-                    <a onclick="global.gotoShipping(event)"><button class="proceed">Proceed to shipping <i class="fa-solid fa-arrow-right-long"></i></button></a>
+                    <br>
+                    <input type="submit" placeholder="Submit">
+                    <!-- <a href="/Strap_Shipping.html" class="proceed" style="text-decoration: none;">Proceed to shipping <i class="fa-solid fa-arrow-right-long"></i></a> -->
+                    <!-- <a onclick="global.gotoShipping(event)"><button class="proceed">Proceed to shipping <i class="fa-solid fa-arrow-right-long"></i></button></a> -->
                 </div>
-                <div class="col-7 hide" id="shipping_details">
+                <!-- <div class="col-7 hide" id="shipping_details">
                     <h3 class="text-center bg-black text-white" style="padding: 10px 10px;">Shipping Form</h3>
                     <br>
                     <div class="contact">
@@ -243,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-7 hide" id="payment_details">
                     <h3 class="text-center bg-black text-white" style="padding: 10px 10px;">Shipping Form</h3>
                     <br>
@@ -334,6 +339,7 @@
     </div>
     <br><br>
     <div class="footer bg-black">
+        <br>
         <div class="container bg-black text-white">
             <div class="row">
                 <div class="col-12 col-md-3 order-2 order-md-2">
@@ -465,6 +471,7 @@
             </div>
         </div>
     </div>
+    <script src="checkoutform.js"></script>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

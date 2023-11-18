@@ -5,7 +5,6 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    /* background-image: url(img/strap\ wallpaper\ 1.jpg); */
     background-image: url(img/strap\ wallpaper\ 4.png);
     background-position: center top;
     background-size: cover;
@@ -17,7 +16,7 @@ body {
     transition: 0.4s;
     z-index: 1;
     /**new-added**/
-    background: black !important;
+    background: rgba(0, 0, 0, 0.489);
     align-items: center;
     display: flex;
     padding: 10px 3%;
@@ -513,7 +512,7 @@ body {
     }
 
     #header {
-        height: 38vh;
+        height: 55vh;
     }
     
 }
@@ -522,7 +521,6 @@ body {
     .hide-sm {
         display: none;
     }   
-
     .small-navbar{
         display: flex !important;
     }
@@ -532,8 +530,13 @@ body {
     }
 
     .header img {
-        width: 20%;
+        display: flex;
+        width: 25%;
     }
+    .header li a {
+        font-size: 20px !important;
+    }
+    
 }
 
 #loader-container {
@@ -632,7 +635,6 @@ body {
     align-items: center;
     border: none;
     font-size: 2em;
-    gap: 6.5rem;
 }
 
 

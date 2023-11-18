@@ -12,7 +12,7 @@ function transBar() {
         if (scrollY > 0) {
             navigation.style.background = "black";
         } else {
-            navigation.style.background = "transparent";
+            navigation.style.background = "rgba(0, 0, 0, 0.489)";
         }
     }
 }

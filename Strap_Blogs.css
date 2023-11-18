@@ -518,7 +518,6 @@ animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
   align-items: center;
   border: none;
   font-size: 2em;
-  gap: 6.5rem;
 }
 
 
@@ -625,7 +624,11 @@ animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
   }
 
   .header img {
-      width: 20%;
+      width: 25%;
+  }
+
+  .header li a {
+    font-size: 20px !important;
   }
 }
 

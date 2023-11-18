@@ -1,6 +1,5 @@
 .container .proceed {
-    padding: 10px 10px;
-    width: 100%;
+    padding: 10px 25px;
     border: none;
     background-color: black;
     color: white;
@@ -466,6 +465,7 @@ a.allowed-goto {
 .header {
     display: flex;
     justify-content: space-between;
+    gap: 14.5rem;
 }
 
 .header .small-navbar {
@@ -565,6 +565,33 @@ a.allowed-goto {
     .header img {
         width: 20%;
     }
+}
+
+@media only screen and (max-width: 800px) {
+
+    #header {
+        height: 40vh;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    .hide-sm {
+        display: none;
+    }   
+
+    .small-navbar{
+        display: flex !important;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .header img {
+        width: 30%;
+    }
+
 }
 
 .header {

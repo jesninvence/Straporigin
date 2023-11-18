@@ -580,7 +580,6 @@ input:valid~label {
     align-items: center;
     border: none;
     font-size: 2em;
-    gap: 6.5rem;
 }
 
 
@@ -684,6 +683,12 @@ input:valid~label {
 
     .header {
         width: 100%;
+    }
+    .header img {
+        width: 25%;
+    }
+    .header li a {
+        font-size: 20px !important;
     }
 }
 
